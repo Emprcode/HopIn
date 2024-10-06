@@ -18,11 +18,13 @@ const CarCard = (props: any) => {
         className="group bg-indigo-50 p-2 sm:p-5 rounded-3xl m-1 sm:m-5
 hover:bg-white
 hover:border-[1px] cursor-pointer duration-50
-border-blue-500 "
+border-blue-500 dark:bg-indigo-200"
       >
-        <h2 className="text-[20px] font-medium mb-2">{car.name}</h2>
-        <h2 className="text-[28px] font-bold mb-2">
-          <span className="text-[12px] font-light">$ </span>
+        <h2 className="text-[20px] font-medium mb-2 dark:text-black">
+          {car.name}
+        </h2>
+        <h2 className="text-[28px] font-bold mb-2 dark:text-black">
+          <span className="text-[12px] font-light dark:text-black">$ </span>
           {car.price}
           <span className="text-[12px] font-light"> /day</span>
         </h2>

@@ -72,7 +72,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm border-b-[1px]">
+    <header className="bg-white dark:bg-black shadow-sm border-b-[1px]">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -161,7 +161,7 @@ const Header = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
+                {/* <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                     Product
                     <ChevronDownIcon
@@ -181,33 +181,46 @@ const Header = () => {
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
-                </Disclosure>
+                </Disclosure> */}
                 <a
-                  href="#"
+                  href="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Home
+                </a>
+                <a
+                  href="/cars"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Cars
+                </a>
+                <a
+                  href="/features"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Features
                 </a>
                 <a
-                  href="#"
+                  href="/contact-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
+                  Contact Us
                 </a>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
+                <SignedOut>
+                  {/* <SignIn /> */}
+
+                  <Link
+                    href="/sign-in"
+                    className="text-md font-semibold leading-6 text-gray-900"
+                  >
+                    Log in <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                </SignedOut>
               </div>
             </div>
           </div>

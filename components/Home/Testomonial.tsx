@@ -58,13 +58,13 @@ const posts = [
 
 const Testomonial = () => {
   return (
-    <div className="bg-white sm:py-12 py-10">
+    <div className="sm:py-12 py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-indigo-600">
             why choose us!
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
             What our customer has to say
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -90,7 +90,7 @@ const Testomonial = () => {
                   className="h-10 w-10 rounded-full bg-gray-50"
                 />
                 <div className="text-sm leading-6">
-                  <p className="font-semibold text-gray-900">
+                  <p className="font-semibold text-gray-900 dark:text-white">
                     <span className="absolute inset-0" />
                     {post.author.name}
                   </p>
